@@ -13,14 +13,23 @@ Se dobbiamo confrontare qualcosa che "cosa" ci serve?
 
 // EMAIL   
 
-const email = document.getElementById("userEmail");
-const password = document.getElementById("userPassword");
+let email = document.getElementById("userEmail");
 
-let emailCorrect = "";
-const emailValidator = "" + "@boolean.it"
+let userEmail = ["emanuele@boolean.it", "clelia@boolean.it", "marco@boolean.it", "samuel@boolean.it"]
+const btn = document.getElementById("login");
 
-if (emailCorrect === emailValidator) {
-    console.log(emailCorrect);
-} else {
-    alert("Your email address isn't correct")
-}
+
+
+
+
+btn.addEventListener("click", function () {
+    for (let i = 0; i < userEmail.length; i++) {
+        if (userEmail[i] === email.value) {
+            console.log("welcome");
+        } else {
+            console.log("access denied");
+        }
+    }
+
+
+})

@@ -16,16 +16,18 @@ Se dobbiamo confrontare qualcosa che "cosa" ci serve?
 let email = document.getElementById("userEmail");
 
 let userEmail = ["emanuele@boolean.it", "clelia@boolean.it", "marco@boolean.it", "samuel@boolean.it"]
+
 const btn = document.getElementById("login");
 
 
+const valid = document.getElementById("valid");
 
 
 
 btn.addEventListener("click", function () {
     for (let i = 0; i < userEmail.length; i++) {
         if (userEmail[i] === email.value) {
-            console.log("welcome");
+            valid.innerText = "Welcome!";
         } else {
             console.log("access denied");
         }

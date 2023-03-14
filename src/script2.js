@@ -1,6 +1,7 @@
 const btnDadi = document.getElementById("giochiamo");
 let umano = document.getElementById("umano");
 let computer = document.getElementById("computer");
+let result = document.getElementById("result");
 
 btnDadi.addEventListener("click", lancioDadi);
 
@@ -12,10 +13,10 @@ function lancioDadi() {
     computer.innerText = `Il computer ha tirato un ${numeroComputer}`;
 
     if (numeroUmano > numeroComputer) {
-        console.log("Hai vinto!");
+        result.innerText = "Hai vinto!";
     } else if (numeroUmano < numeroComputer) {
-        console.log("Hai perso!");
+        result.innerText = "Hai perso!";
     } else {
-        console.log("Pareggio!");
+        result.innerText = "Pareggio!";
     }
 }
